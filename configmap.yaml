@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
- name: nginx-config
+  name: nginx-config
 data:
- index.html: |
-<html>
-<head><title>Hola desde ConfigMap</title></head>
-<body>
-<h1>Desplegado con Argo CD + ConfigMap</h1>
-</body>
-</html>
+  index.html: |
+    <html>
+      <head><title>Hola desde ConfigMap</title></head>
+      <body>
+        <h1>Desplegado con Argo CD + ConfigMap</h1>
+      </body>
+    </html>
