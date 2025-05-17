@@ -21,6 +21,17 @@ spec:
           volumeMounts:
             - name: html-volume
               mountPath: /usr/share/nginx/html
+          env:
+          - name: API_KEY
+            valueFrom:
+              secretKeyRef:
+                name: app-secret
+                key: API_KEY
+          - name: DB_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: app-secret
+                key: DB_PASSWORD
           readinessProbe:
             httpGet:
               path: /
